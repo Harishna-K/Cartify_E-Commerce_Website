@@ -66,37 +66,50 @@ cartify/
 └── README.md
 ```
 
-## 🛠️ Installation & Setup
-1. Clone the Repository
+## ⚙️ Setup Instructions
+1️⃣ Clone the Repository
 ```
 git clone https://github.com/Harishna-K/Cartify_E-Commerce_Website.git
 cd Cartify_E-Commerce_Website
 ```
 
-2. Backend Setup
+2️⃣ Install Root Dependencies
 ```
-cd backend
 npm install
 ```
 
-Create a .env file inside backend/ with the following:
+3️⃣ Build the React Frontend
 ```
-PORT=5000
-MONGO_URI=your_mongodb_uri
-JWT_SECRET=your_jwt_secret
-EMAIL_USER=your_email@example.com
-EMAIL_PASS=your_email_password
+cd frontend
+npm install
+npm run build
 ```
-Run the server:
+🛠 Wait for the application to finish building.
+
+4️⃣ Configure Environment Variables
+Edit backend/config/config.env and set your MongoDB connection string:
 ```
-npm run dev
+DB_LOCAL_URI=mongodb://localhost:27017/GKCcart
 ```
 
-3. Frontend Setup
+5️⃣ Seed Demo Data
+Go back to the root folder and run:
 ```
-cd ../frontend
-npm install
-npm start
+npm run seeder
 ```
+
+6️⃣ Run in Production Mode
+```
+npm run prod
+```
+
+🧪 Test Application
+Open your browser and navigate to:
+```
+http://localhost:8000
+```
+Test frontend routes, API endpoints, and product flows.
+
+
 
 
